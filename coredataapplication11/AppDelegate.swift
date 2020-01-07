@@ -13,9 +13,31 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var dbpath = ""
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+       
+        let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        print(docPath)
+        self.dbpath = docPath + "/kyuri...database.db"
+        
+        if(!FileManager.default.fileExists(atPath: self.dbpath))
+        {
+            let bundleDBPath = Bundle.main.path(forResource: "kyuri...database", ofType: "db")
+            
+            do{
+                try FileManager.default.copyItem(atPath: bundleDBPath!, toPath: self.dbpath)
+            }
+            catch(let err as NSError)
+            {
+                print(err.localizedDescription)
+            }
+            
+        }
+        
+        
         // Override point for customization after application launch.
         return true
     }

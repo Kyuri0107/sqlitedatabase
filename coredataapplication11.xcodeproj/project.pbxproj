@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5FFF7923C335CA0081D2BE /* kyuri...database.db in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FFF7823C335C90081D2BE /* kyuri...database.db */; };
+		4E84B42C23C479B3008BA875 /* dbmanage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84B42B23C479B3008BA875 /* dbmanage.swift */; };
+		4E84B42E23C47B45008BA875 /* SignUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84B42D23C47B45008BA875 /* SignUP.swift */; };
+		4E84B43123C481BC008BA875 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E84B43023C481BC008BA875 /* libsqlite3.0.tbd */; };
 		4EAAE07A23B9E50700D3D03C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAE07923B9E50700D3D03C /* AppDelegate.swift */; };
 		4EAAE07C23B9E50700D3D03C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAE07B23B9E50700D3D03C /* ViewController.swift */; };
 		4EAAE07F23B9E50700D3D03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAAE07D23B9E50700D3D03C /* Main.storyboard */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E5FFF7823C335C90081D2BE /* kyuri...database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = kyuri...database.db; sourceTree = "<group>"; };
+		4E5FFF7D23C336180081D2BE /* coredataapplication11-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coredataapplication11-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E84B42B23C479B3008BA875 /* dbmanage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbmanage.swift; sourceTree = "<group>"; };
+		4E84B42D23C47B45008BA875 /* SignUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUP.swift; sourceTree = "<group>"; };
+		4E84B43023C481BC008BA875 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4EAAE07623B9E50700D3D03C /* coredataapplication11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coredataapplication11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAAE07923B9E50700D3D03C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EAAE07B23B9E50700D3D03C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +40,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E84B43123C481BC008BA875 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E5FFF7723C334CA0081D2BE /* db */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FFF7823C335C90081D2BE /* kyuri...database.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		4E5FFF7C23C335F00081D2BE /* dbapp */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FFF7D23C336180081D2BE /* coredataapplication11-Bridging-Header.h */,
+				4E84B42B23C479B3008BA875 /* dbmanage.swift */,
+			);
+			path = dbapp;
+			sourceTree = "<group>";
+		};
+		4E84B42F23C481BC008BA875 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E84B43023C481BC008BA875 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EAAE06D23B9E50700D3D03C = {
 			isa = PBXGroup;
 			children = (
+				4E5FFF7723C334CA0081D2BE /* db */,
 				4EAAE07823B9E50700D3D03C /* coredataapplication11 */,
 				4EAAE07723B9E50700D3D03C /* Products */,
+				4E84B42F23C481BC008BA875 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +93,7 @@
 		4EAAE07823B9E50700D3D03C /* coredataapplication11 */ = {
 			isa = PBXGroup;
 			children = (
+				4E5FFF7C23C335F00081D2BE /* dbapp */,
 				4EAAE07923B9E50700D3D03C /* AppDelegate.swift */,
 				4EAAE07B23B9E50700D3D03C /* ViewController.swift */,
 				4EAAE07D23B9E50700D3D03C /* Main.storyboard */,
@@ -63,6 +101,7 @@
 				4EAAE08523B9E50700D3D03C /* LaunchScreen.storyboard */,
 				4EAAE08823B9E50700D3D03C /* Info.plist */,
 				4EAAE08023B9E50700D3D03C /* coredataapplication11.xcdatamodeld */,
+				4E84B42D23C47B45008BA875 /* SignUP.swift */,
 			);
 			path = coredataapplication11;
 			sourceTree = "<group>";
@@ -99,6 +138,7 @@
 				TargetAttributes = {
 					4EAAE07523B9E50700D3D03C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -128,6 +168,7 @@
 			files = (
 				4EAAE08723B9E50700D3D03C /* LaunchScreen.storyboard in Resources */,
 				4EAAE08423B9E50700D3D03C /* Assets.xcassets in Resources */,
+				4E5FFF7923C335CA0081D2BE /* kyuri...database.db in Resources */,
 				4EAAE07F23B9E50700D3D03C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E84B42C23C479B3008BA875 /* dbmanage.swift in Sources */,
 				4EAAE07C23B9E50700D3D03C /* ViewController.swift in Sources */,
 				4EAAE07A23B9E50700D3D03C /* AppDelegate.swift in Sources */,
 				4EAAE08223B9E50700D3D03C /* coredataapplication11.xcdatamodeld in Sources */,
+				4E84B42E23C47B45008BA875 /* SignUP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +321,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = coredataapplication11/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyuri123.coredataapplication11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "coredataapplication11/dbapp/coredataapplication11-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,11 +338,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = coredataapplication11/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyuri123.coredataapplication11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "coredataapplication11/dbapp/coredataapplication11-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
